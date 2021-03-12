@@ -3,7 +3,7 @@
 // license that can be found in the LICENSE file.
 
 /*
-Package btcutil provides bitcoin-specific convenience functions and types.
+Package bglutil provides bitcoin-specific convenience functions and types.
 
 Block Overview
 
@@ -36,7 +36,7 @@ To decode/encode an address:
 		"e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d57" +
 		"8a4c702b6bf11d5f"
 	defaultNet := &chaincfg.MainNetParams
-	addr, err := btcutil.DecodeAddress(addrString, defaultNet)
+	addr, err := bglutil.DecodeAddress(addrString, defaultNet)
 	if err != nil {
 		fmt.Println(err)
 		return

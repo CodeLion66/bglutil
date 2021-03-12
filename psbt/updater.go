@@ -125,7 +125,7 @@ func (p *Updater) addPartialSignature(inIndex int, sig []byte,
 		if pInput.RedeemScript != nil {
 			outIndex := p.Upsbt.UnsignedTx.TxIn[inIndex].PreviousOutPoint.Index
 			scriptPubKey := pInput.NonWitnessUtxo.TxOut[outIndex].PkScript
-			scriptHash := btcutil.Hash160(pInput.RedeemScript)
+			scriptHash := bglutil.Hash160(pInput.RedeemScript)
 
 			scriptHashScript, err := txscript.NewScriptBuilder().
 				AddOp(txscript.OP_HASH160).
@@ -155,7 +155,7 @@ func (p *Updater) addPartialSignature(inIndex int, sig []byte,
 
 		var script []byte
 		if pInput.RedeemScript != nil {
-			scriptHash := btcutil.Hash160(pInput.RedeemScript)
+			scriptHash := bglutil.Hash160(pInput.RedeemScript)
 			scriptHashScript, err := txscript.NewScriptBuilder().
 				AddOp(txscript.OP_HASH160).
 				AddData(scriptHash).
@@ -195,7 +195,7 @@ func (p *Updater) addPartialSignature(inIndex int, sig []byte,
 			}
 		} else {
 			// Otherwise, this is a p2wkh input.
-			pubkeyHash := btcutil.Hash160(pubkey)
+			pubkeyHash := bglutil.Hash160(pubkey)
 			pubkeyHashScript, err := txscript.NewScriptBuilder().
 				AddOp(txscript.OP_0).
 				AddData(pubkeyHash).

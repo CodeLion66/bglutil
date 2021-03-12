@@ -18,7 +18,7 @@ import (
 // TestTx tests the API for Tx.
 func TestTx(t *testing.T) {
 	testTx := Block100000.Transactions[0]
-	tx := btcutil.NewTx(testTx)
+	tx := bglutil.NewTx(testTx)
 
 	// Ensure we get the same data back out.
 	if msgTx := tx.MsgTx(); !reflect.DeepEqual(msgTx, testTx) {
@@ -63,7 +63,7 @@ func TestNewTxFromBytes(t *testing.T) {
 	testTxBytes := testTxBuf.Bytes()
 
 	// Create a new transaction from the serialized bytes.
-	tx, err := btcutil.NewTxFromBytes(testTxBytes)
+	tx, err := bglutil.NewTxFromBytes(testTxBytes)
 	if err != nil {
 		t.Errorf("NewTxFromBytes: %v", err)
 		return
@@ -89,7 +89,7 @@ func TestTxErrors(t *testing.T) {
 
 	// Truncate the transaction byte buffer to force errors.
 	shortBytes := testTxBytes[:4]
-	_, err = btcutil.NewTxFromBytes(shortBytes)
+	_, err = bglutil.NewTxFromBytes(shortBytes)
 	if err != io.EOF {
 		t.Errorf("NewTxFromBytes: did not get expected error - "+
 			"got %v, want %v", err, io.EOF)
@@ -99,7 +99,7 @@ func TestTxErrors(t *testing.T) {
 // TestTxHasWitness tests the HasWitness() method.
 func TestTxHasWitness(t *testing.T) {
 	msgTx := Block100000.Transactions[0] // contains witness data
-	tx := btcutil.NewTx(msgTx)
+	tx := bglutil.NewTx(msgTx)
 
 	tx.WitnessHash() // Populate the witness hash cache
 	tx.HasWitness()  // Should not fail (see btcsuite/btcd#1543)
@@ -109,7 +109,7 @@ func TestTxHasWitness(t *testing.T) {
 	}
 
 	for _, msgTxWithoutWitness := range Block100000.Transactions[1:] {
-		txWithoutWitness := btcutil.NewTx(msgTxWithoutWitness)
+		txWithoutWitness := bglutil.NewTx(msgTxWithoutWitness)
 		if txWithoutWitness.HasWitness() {
 			t.Errorf("HasWitness: got false, want true")
 		}
@@ -119,7 +119,7 @@ func TestTxHasWitness(t *testing.T) {
 // TestTxWitnessHash tests the WitnessHash() method.
 func TestTxWitnessHash(t *testing.T) {
 	msgTx := Block100000.Transactions[0] // contains witness data
-	tx := btcutil.NewTx(msgTx)
+	tx := bglutil.NewTx(msgTx)
 
 	if tx.WitnessHash().IsEqual(tx.Hash()) {
 		t.Errorf("WitnessHash: witness hash and tx id must NOT be same - "+
@@ -127,7 +127,7 @@ func TestTxWitnessHash(t *testing.T) {
 	}
 
 	for _, msgTxWithoutWitness := range Block100000.Transactions[1:] {
-		txWithoutWitness := btcutil.NewTx(msgTxWithoutWitness)
+		txWithoutWitness := bglutil.NewTx(msgTxWithoutWitness)
 		if !txWithoutWitness.WitnessHash().IsEqual(txWithoutWitness.Hash()) {
 			t.Errorf("WitnessHash: witness hash and tx id must be same - "+
 				"got %v, want %v", txWithoutWitness.WitnessHash(), txWithoutWitness.Hash())
