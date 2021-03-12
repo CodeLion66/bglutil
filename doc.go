@@ -43,4 +43,4 @@ To decode/encode an address:
 	}
 	fmt.Println(addr.EncodeAddress())
 */
-package btcutil
+package bglutil
