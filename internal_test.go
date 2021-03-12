@@ -9,7 +9,7 @@ cases which are either not possible or can't reliably be tested via the public
 interface. The functions are only exported while the tests are being run.
 */
 
-package btcutil
+package bglutil
 
 import (
 	"github.com/bitgesellofficial/bgld/btcec"
