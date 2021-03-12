@@ -21,7 +21,7 @@ import (
 // WARNING: This function must NOT be called with published transactions since
 // it will mutate the transaction if it's not already sorted.  This can cause
 // issues if you mutate a tx in a block, for example, which would invalidate the
-// block.  It could also cause cached hashes, such as in a btcutil.Tx to become
+// block.  It could also cause cached hashes, such as in a bglutil.Tx to become
 // invalidated.
 //
 // The function should only be used if the caller is creating the transaction or

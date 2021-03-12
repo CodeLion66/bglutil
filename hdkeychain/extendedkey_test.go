@@ -1196,7 +1196,7 @@ func TestLeadingZero(t *testing.T) {
 	}
 
 	if hex.EncodeToString(child1nonstandard.key) != "ea46d8f58eb863a2d371a938396af8b0babe85c01920f59a8044412e70e837ee" {
-		t.Error("incorrect btcutil backwards compatible BIP32-like derivation")
+		t.Error("incorrect bglutil backwards compatible BIP32-like derivation")
 	}
 
 	if !child0.IsAffectedByIssue172() {
