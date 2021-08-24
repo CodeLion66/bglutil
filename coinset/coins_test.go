@@ -11,10 +11,10 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/bitgesellofficial/bgld/chaincfg/chainhash"
-	"github.com/bitgesellofficial/bgld/wire"
-	"github.com/bitgesellofficial/bglutil"
-	"github.com/bitgesellofficial/bglutil/coinset"
+	"github.com/frankcsx/bgld/chaincfg/chainhash"
+	"github.com/frankcsx/bgld/wire"
+	"github.com/frankcsx/bglutil"
+	"github.com/frankcsx/bglutil/coinset"
 )
 
 type TestCoin struct {

@@ -12,9 +12,9 @@ interface. The functions are only exported while the tests are being run.
 package bglutil
 
 import (
-	"github.com/bitgesellofficial/bgld/btcec"
-	"github.com/bitgesellofficial/bglutil/base58"
-	"github.com/bitgesellofficial/bglutil/bech32"
+	"github.com/frankcsx/bgld/btcec"
+	"github.com/frankcsx/bglutil/base58"
+	"github.com/frankcsx/bglutil/bech32"
 	"golang.org/x/crypto/ripemd160"
 )
 

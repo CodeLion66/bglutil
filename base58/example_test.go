@@ -7,7 +7,7 @@ package base58_test
 import (
 	"fmt"
 
-	"github.com/bitgesellofficial/bglutil/base58"
+	"github.com/frankcsx/bglutil/base58"
 )
 
 // This example demonstrates how to decode modified base58 encoded data.

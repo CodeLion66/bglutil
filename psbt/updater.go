@@ -14,9 +14,9 @@ import (
 	"bytes"
 	"crypto/sha256"
 
-	"github.com/bitgesellofficial/bgld/txscript"
-	"github.com/bitgesellofficial/bgld/wire"
-	"github.com/bitgesellofficial/bglutil"
+	"github.com/frankcsx/bgld/txscript"
+	"github.com/frankcsx/bgld/wire"
+	"github.com/frankcsx/bglutil"
 )
 
 // Updater encapsulates the role 'Updater' as specified in BIP174; it accepts

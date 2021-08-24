@@ -9,7 +9,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/bitgesellofficial/bglutil/base58"
+	"github.com/frankcsx/bglutil/base58"
 )
 
 var stringTests = []struct {

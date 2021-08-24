@@ -1,4 +1,4 @@
-module github.com/bitgesellofficial/bglutil
+module github.com/frankcsx/bglutil
 
 go 1.14
 

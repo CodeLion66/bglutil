@@ -1,4 +1,4 @@
-module github.com/bitgesellofficial/bglutil/psbt
+module github.com/frankcsx/bglutil/psbt
 
 go 1.13
 

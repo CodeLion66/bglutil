@@ -9,10 +9,10 @@ import (
 	"math"
 	"sync"
 
-	"github.com/bitgesellofficial/bgld/chaincfg/chainhash"
-	"github.com/bitgesellofficial/bgld/txscript"
-	"github.com/bitgesellofficial/bgld/wire"
-	"github.com/bitgesellofficial/bglutil"
+	"github.com/frankcsx/bgld/chaincfg/chainhash"
+	"github.com/frankcsx/bgld/txscript"
+	"github.com/frankcsx/bgld/wire"
+	"github.com/frankcsx/bglutil"
 )
 
 // ln2Squared is simply the square of the natural log of 2.

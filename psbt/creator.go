@@ -5,7 +5,7 @@
 package psbt
 
 import (
-	"github.com/bitgesellofficial/bgld/wire"
+	"github.com/frankcsx/bgld/wire"
 )
 
 // MinTxVersion is the lowest transaction version that we'll permit.

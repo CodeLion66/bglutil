@@ -14,7 +14,7 @@ import (
 
 	"io"
 
-	"github.com/bitgesellofficial/bgld/wire"
+	"github.com/frankcsx/bgld/wire"
 )
 
 // psbtMagicLength is the length of the magic bytes used to signal the start of

@@ -9,13 +9,13 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/bitgesellofficial/bgld/chaincfg"
-	"github.com/bitgesellofficial/bgld/chaincfg/chainhash"
-	"github.com/bitgesellofficial/bgld/txscript"
-	"github.com/bitgesellofficial/bgld/wire"
-	"github.com/bitgesellofficial/bglutil"
-	"github.com/bitgesellofficial/bglutil/gcs"
-	"github.com/bitgesellofficial/bglutil/gcs/builder"
+	"github.com/frankcsx/bgld/chaincfg"
+	"github.com/frankcsx/bgld/chaincfg/chainhash"
+	"github.com/frankcsx/bgld/txscript"
+	"github.com/frankcsx/bgld/wire"
+	"github.com/frankcsx/bglutil"
+	"github.com/frankcsx/bglutil/gcs"
+	"github.com/frankcsx/bglutil/gcs/builder"
 )
 
 var (
